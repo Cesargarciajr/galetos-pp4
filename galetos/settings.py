@@ -31,8 +31,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-cesargarciajr-galetos-pp-zw8sn53jr5.us2.codeanyapp.com',
-                 'https://galetos-pp4-22099c43bb96.herokuapp.com/', 'localhost',
-                 'galetos-pp4.herokuapp.com', 'https://galetos-pp4-22099c43bb96.herokuapp.com/']
+                'localhost', 'galetos-pp4-22099c43bb96.herokuapp.com',]
 
 
 # Application definition
