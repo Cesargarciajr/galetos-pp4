@@ -9,11 +9,11 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
-from pathlib import Path
 import os
+from pathlib import Path
+
 import dj_database_url
-if os.path.isfile('env.py'):
+if os.path.isfile("env.py"):
     import env
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -31,20 +31,21 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['8000-cesargarciajr-galetos-pp-zw8sn53jr5.us2.codeanyapp.com',
-                 'https://galetos-pp4-22099c43bb96.herokuapp.com/', 'localhost']
+                 'https://galetos-pp4-22099c43bb96.herokuapp.com/', 'localhost',
+                 'galetos-pp4.herokuapp.com', 'https://galetos-pp4-22099c43bb96.herokuapp.com/']
 
 
 # Application definition
 
 INSTALLED_APPS = [
-    'django.contrib.admin',
+     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'django.contrib.staticfiles',
     'cloudinary_storage',
-    'cloudinary'
+    'django.contrib.staticfiles',
+    'cloudinary',
     'galetosapp',
 ]
 
