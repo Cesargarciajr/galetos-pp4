@@ -1,0 +1,85 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/static/css/style.css" />
+    <title>Galeto's</title>
+  </head>
+  <body>
+    <header>
+      <!-- Navbar-->
+      <nav>
+        <div class="nav-wrapper grey darken-3">
+          <div>
+            <a href="#" class="brand-logo " id="logo"
+              >Galeto's Dublin</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"
+              ><i class="fas fa-bars"></i
+            ></a>
+            <ul class="right hide-on-med-and-down">
+              <li><a href="sass.html">Home</a></li>
+              <li><a href="badges.html">About Us</a></li>
+              <li><a href="collapsible.html">Contact Us</a></li>
+              <li><a class="waves-effect waves-light btn">Booking</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Mobile sidenav -->
+      <ul class="sidenav" id="mobile-demo">
+        <li><a href="sass.html">Home</a></li>
+        <li><a href="badges.html">About Us</a></li>
+        <li><a href="collapsible.html">Contact Us</a></li>
+        <li><a href="mobile.html">Booking</a></li>
+      </ul>
+    </header>
+    <main>
+        {% block content %}
+        
+        {% endblock%}
+    </main>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Footer Content</h5>
+                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.
+                    </p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2014 Copyright Text
+                <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="static/js/script.js"></script>
+  </body>
+</html>
