@@ -1,19 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 <div class="slider">
     <ul class="slides">
         <li>
-            <img src="static/images/hero-img.webp" />
+            <img src="static/images/hero-img.webp"/>
             <!-- random image -->
             <div class="caption center-align">
-                <h3>Crispy on the Outside</h3>
+                <h3>Tender & Crispy</h3>
                 <h5 class="light grey-text text-lighten-3">
                     Try Our Signature Roasted Chicken Today!
                 </h5>
             </div>
         </li>
         <li>
-            <img src="static/images/slide2.jpg">
+            <img src="{% static 'images/slide2.jpg' %}"/>
             <!-- random image -->
             <div class="caption left-align ">
                 <h3>Golden Perfection</h3>
@@ -23,7 +24,7 @@
             </div>
         </li>
         <li>
-            <img src="static/images/slide3.webp" />
+            <img src="{% static 'images/slide3.webp' %}"/>
             <!-- random image -->
             <div class="caption right-align">
                 <h3>Crispy on the Outside</h3>
@@ -33,7 +34,7 @@
             </div>
         </li>
         <li>
-            <img src="static/images/slide4.webp" />
+            <img src="{% static 'images/slide4.webp' %}" />
             <!-- random image -->
             <div class="caption center-align">
                 <h3>From Our Oven to Your Table</h3>

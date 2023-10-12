@@ -7,6 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
     var slider = document.querySelectorAll('.slider');
     var instances = M.Slider.init(slider, {
         indicators: false,
-        height: 700
+        height: 600
     });
 });
