@@ -1,5 +1,4 @@
 {% load static %}
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -21,19 +20,21 @@
     <title>Galeto's</title>
   </head>
   <body>
+    {% load static %}
     <header>
       <!-- Navbar-->
       <nav>
         <div class="nav-wrapper grey darken-3">
           <div>
-            <a href="{{ index.html }}" class="brand-logo " id="logo"
-              >Galeto's Dublin</a>
+            <a href="{% url 'home' %}" class="brand-logo" id="logo"
+              >Galeto's Dublin</a
+            >
             <a href="#" data-target="mobile-demo" class="sidenav-trigger"
               ><i class="fas fa-bars"></i
             ></a>
             <ul class="right hide-on-med-and-down">
-              <li><a href="{{ index.html }}">Home</a></li>
-              <li><a href="{{ about.html }}">About Us</a></li>
+              <li><a href="{% url 'home' %}">Home</a></li>
+              <li><a href="{% url 'about' %}">About Us</a></li>
               <li><a href="collapsible.html">Contact Us</a></li>
               <li><a class="waves-effect waves-light btn">Booking</a></li>
             </ul>
@@ -42,44 +43,51 @@
       </nav>
       <!-- Mobile sidenav -->
       <ul class="sidenav" id="mobile-demo">
-        <li><a href="{{ index.html }}">Home</a></li>
-        <li><a href="{{ about.html }}">About Us</a></li>
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About Us</a></li>
         <li><a href="collapsible.html">Contact Us</a></li>
         <li><a href="mobile.html">Booking</a></li>
       </ul>
     </header>
-    <main>
-        {% block content %}
-        
-        {% endblock%}
-    </main>
+    <main>{% block content %} {% endblock%}</main>
     <footer class="page-footer grey darken-4">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Galeto's Dublin</h5>
-                    <p class="grey-text text-lighten-4">The best roasted chicken you ever had.
-                    </p>
-                </div>
-                <div class="col l4 offset-l2 s12">
-                    <ul>
-                        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
-                        <li><a class="grey-text text-lighten-3" href="#!">Bookings</a></li>
-                        <p>Social Media:</p>
-                        <a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-instagram" style="color: #ffffff;"></i></a>
-                        <a class="grey-text text-lighten-3" href="#!"><i class="fa-brands fa-square-facebook"
-                                style="color: #ffffff;"></i></a>
-                    </ul>
-                </div>
-            </div>
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Galeto's Dublin</h5>
+            <p class="grey-text text-lighten-4">
+              The best roasted chicken you ever had.
+            </p>
+          </div>
+          <div class="col l4 offset-l2 s12">
+            <ul>
+              <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">About Us</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Contact Us</a>
+              </li>
+              <li>
+                <a class="grey-text text-lighten-3" href="#!">Bookings</a>
+              </li>
+              <p>Social Media:</p>
+              <a class="grey-text text-lighten-3" href="#!"
+                ><i class="fa-brands fa-instagram" style="color: #ffffff"></i
+              ></a>
+              <a class="grey-text text-lighten-3" href="#!"
+                ><i
+                  class="fa-brands fa-square-facebook"
+                  style="color: #ffffff"
+                ></i
+              ></a>
+            </ul>
+          </div>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2023 Copyright
-            </div>
-        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2023 Copyright</div>
+      </div>
     </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="static/js/script.js"></script>
