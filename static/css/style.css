@@ -2,3 +2,7 @@
   background: rgba(0, 0, 0, 0.582);
   padding: 25px;
 }
+
+.col.m6.s12 {
+    padding: 15px 25px 10px 25px;
+}
