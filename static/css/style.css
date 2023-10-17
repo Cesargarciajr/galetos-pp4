@@ -13,3 +13,11 @@ main {
     z-index: -1;
 }
 
+#modal1 {
+    width: 500px;
+    padding: 25px;
+}
+
+.tabs .indicator {
+    background-color: rgb(38 166 154);
+}
