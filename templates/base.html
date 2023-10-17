@@ -35,7 +35,7 @@
             <ul class="right hide-on-med-and-down">
               <li><a href="{% url 'home' %}">Home</a></li>
               <li><a href="{% url 'about' %}">About Us</a></li>
-              <li><a href="collapsible.html">Contact Us</a></li>
+              <li><a href="{% url 'contact' %}">Contact Us</a></li>
               <li><a class="waves-effect waves-light btn">Booking</a></li>
             </ul>
           </div>
@@ -45,11 +45,14 @@
       <ul class="sidenav" id="mobile-demo">
         <li><a href="{% url 'home' %}">Home</a></li>
         <li><a href="{% url 'about' %}">About Us</a></li>
-        <li><a href="collapsible.html">Contact Us</a></li>
+        <li><a href="{% url 'contact' %}">Contact Us</a></li>
         <li><a href="mobile.html">Booking</a></li>
       </ul>
     </header>
-    <main>{% block content %} {% endblock%}</main>
+    <main>
+        {% block content %} 
+        {% endblock%}
+    </main>
     <footer class="page-footer grey darken-4">
       <div class="container">
         <div class="row">
@@ -61,15 +64,15 @@
           </div>
           <div class="col l4 offset-l2 s12">
             <ul>
-              <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+              <li><a class="grey-text text-lighten-3" href="{% url 'home' %}">Home</a></li>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">About Us</a>
+                <a class="grey-text text-lighten-3" href="{% url 'about' %}">About Us</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Contact Us</a>
+                <a class="grey-text text-lighten-3" href="{% url 'contact' %}">Contact Us</a>
               </li>
               <li>
-                <a class="grey-text text-lighten-3" href="#!">Bookings</a>
+                <a class="grey-text text-lighten-3" href="#">Bookings</a>
               </li>
               <p>Social Media:</p>
               <a class="grey-text text-lighten-3" href="#!"

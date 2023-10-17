@@ -8,5 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var instances = M.Slider.init(slider, {
     indicators: false,
     height: 600,
+    duration: 300,
   });
 });

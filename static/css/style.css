@@ -1,3 +1,4 @@
+{% load static %}
 .caption {
   background: rgba(0, 0, 0, 0.582);
   padding: 25px;
@@ -6,3 +7,9 @@
 .col.m6.s12 {
     padding: 15px 25px 10px 25px;
 }
+
+main {
+    background-image: url("/static/images/hero-img.webp");
+    z-index: -1;
+}
+
