@@ -1,9 +1,10 @@
-from django.urls import path
+from django.urls import path, include
 from . import views
 
 urlpatterns = [
     path('', views.home, name="home"),
     path('about/', views.about, name="about"),
     path('contact/', views.contact, name="contact"),
-    path('manage-booking', views.manage, name="manage"),
+    path('manage/', views.manage, name="manage"),
+    path('accounts/', include('allauth.urls')),
 ]
