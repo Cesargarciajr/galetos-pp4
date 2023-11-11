@@ -3,24 +3,32 @@
 {% load i18n %}
 {% load account socialaccount %}
 
-{% block head_title %}{% trans "Sign In" %}{% endblock head_title %}
+{% block head_title %}{% trans "Sign In" %}{% endblock %}
 
-{% block content %} {% load static %}
-<div id="modal1" class="modal grey lighten-2">
-    <div class="modal-content grey lighten-2">
-        <h1>{% trans "Sign In" %}</h1>
+{% block content %}
+<br>
+<section class="container section" id="manage padding">
+    <div class="row z-depth-3 no-margin grey lighten-4">
+        <div class="col s12 center flow-text grey-text text-darken-4">
+            <h3>{% trans "Sign In" %}</h3>
 
-        <p>{% blocktrans %}If you have not created an account yet, then please
-        <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-
-        <form class="login" method="POST" action="{% url 'account_login' %}">
-        {% csrf_token %}
-        {{ form.as_p }}
-        {% if redirect_field_value %}
-        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-        {% endif %}
-        <button class="primaryAction" type="submit" class="btn-large">{% trans "Sign In" %}</button>
-        </form>
+            <p>{% blocktrans %}If
+                you
+                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
+                first.{% endblocktrans %}</p>
+        </div>
+        <div class="col s12 flow-text grey-text text-darken-4">
+            <form class="login" method="POST" action="{% url 'account_login' %}">
+                {% csrf_token %}
+                {{ form.as_p }}
+                {% if redirect_field_value %}
+                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                {% endif %}
+                <button class="btn-large btn-signup" type="submit">{% trans "Sign In" %}</button>
+                <br>
+            </form>
+            <br>
+        </div>
     </div>
-</div>
-{% endblock content %}
+</section>
+{% endblock %}

@@ -4,51 +4,46 @@
   <div class="row z-depth-3 no-margin grey lighten-4">
     <div class="col s12 flow-text grey-text text-darken-4">
       <ul class="tabs tabs-swipe-demo flow-text grey-text text-darken-4">
-        <li class="tab col s4">
+        <li class="tab col s6">
           <a
             href="#new-booking"
             class="grey lighten-4 grey-text text-darken-4 active"
             ><i class="fa-solid fa-square-plus"></i> New Booking</a
           >
         </li>
-        <li class="tab col s4">
+        <li class="tab col s6">
           <a href="#edit-booking" class="grey lighten-4 grey-text text-darken-4"
             ><i class="fa-solid fa-pen-to-square"></i> Edit Booking</a
-          >
-        </li>
-        <li class="tab col s4">
-          <a href="#profile" class="grey lighten-4 grey-text text-darken-4"
-            ><i class="fa-solid fa-user"></i> Profile</a
           >
         </li>
       </ul>
       <div class="col s12" id="new-booking">
         <p class="flow-text grey-text text-darken-4">Book Now</p>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-solid fa-user fa-2xs prefix"></i>
           <input id="first_name" type="text" class="validate" />
           <label for="first_name">First Name</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <input id="last_name" type="text" class="validate" />
           <label for="last_name">Last Name</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-solid fa-phone fa-2xs prefix"></i>
           <input id="telephone" type="tel" class="validate" />
           <label for="telephone">Mobile</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-solid fa-envelope fa-2xs prefix"></i>
           <input id="email" type="email" class="validate" />
           <label for="email">Email</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-regular fa-calendar-days fa-2xs prefix"></i>
           <input id="date" type="text" class="datepicker validate" />
           <label for="date">Date</label>
         </div>
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-regular fa-clock fa-2xs prefix"></i>
           {% if date == "saturday or sunday" %}
           <select>
@@ -69,7 +64,7 @@
             <option value="16:30">16:30</option>
             <option value="17:00">17:00</option>
           </select>
-          <label for="quantity">How many?</label>
+          <label for="quantity">What time?</label>
           {% else %}
           <select>
             <option value="" disabled selected>Select time</option>
@@ -83,10 +78,10 @@
             <option value="14:30">14:30</option>
             <option value="15:00">15:00</option>
           </select>
-          <label for="quantity">How many?</label>
+          <label for="quantity">What time?</label>
         </div>
         {% endif %}
-        <div class="input-field col s6">
+        <div class="input-field col s12 m6">
           <i class="fa-solid fa-drumstick-bite fa-2xs prefix"></i>
           <select>
             <option value="" disabled selected>0</option>
@@ -103,7 +98,7 @@
           </select>
           <label for="quantity">How many?</label>
         </div>
-        <div class="col s6 center">
+        <div class="col s12 m6 center">
           <button
             class="btn-large waves-effect waves-light center"
             type="submit"
@@ -113,38 +108,9 @@
           </button>
         </div>
       </div>
-      <div class="col s12" id="edit-booking">
+      <div class="col s12 m6" id="edit-booking">
         <p class="flow-text grey-text text-darken-4">Edit Booking</p>
         <h1>BOOKINGS GO HERE</h1>
-      </div>
-      <div class="col s12" id="profile">
-        <p class="flow-text grey-text text-darken-4">Profile</p>
-        <div class="input-field col s6">
-          <i class="fa-solid fa-user fa-2xs prefix"></i>
-          <input id="first_name" type="text" class="validate" />
-          <label for="first_name"> First Name</label>
-        </div>
-        <div class="input-field col s6">
-          <input id="last_name" type="text" class="validate" />
-          <label for="last_name">Last Name</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="fa-solid fa-phone fa-2xs prefix"></i>
-          <input id="telephone" type="tel" class="validate" />
-          <label for="telephone"> Mobile</label>
-        </div>
-        <div class="input-field col s6">
-          <i class="fa-solid fa-envelope fa-2xs prefix"></i>
-          <input id="email" type="email" class="validate" />
-          <label for="email"> Email</label>
-        </div>
-        <div class="col s6">
-          <button
-            class="btn-large waves-effect waves-light center"
-            type="submit"
-            name="action"
-          >
-            Reset Password
           </button>
         </div>
       </div>

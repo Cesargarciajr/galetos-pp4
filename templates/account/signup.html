@@ -1,18 +1,18 @@
 {% extends "base.html" %} {% load i18n %} {% block head_title %}{% trans
 "Signup" %}{% endblock head_title %} {% block content %}
-<br />
+<br>
 <section class="container section" id="manage padding">
   <div class="row z-depth-3 no-margin grey lighten-4">
     <div class="col s12 center flow-text grey-text text-darken-4">
       <h3>{% trans "Join Us now!" %}</h3>
       <p class="grey lighten-4 grey-text text-darken-4">
         {% blocktrans %}Already have an account? Then please
-        <a href="#modal1" class="modal-trigger">sign in</a>.{% endblocktrans %}
+        <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
       </p>
     </div>
     <div class="col s12 flow-text grey-text text-darken-4">
-      <form
-        class="col m11 s12 signup grey lighten-4 grey-text text-darken-4"
+        <form
+        class="col s12 signup grey lighten-4 grey-text text-darken-4"
         id="signup_form"
         method="post"
         action="{% url 'account_signup' %}"
@@ -25,10 +25,12 @@
           value="{{ redirect_field_value }}"
         />
         {% endif %}
-        <button class="btn" type="submit">{% trans "Sign Up" %} &raquo;</button>
-      </form>
-      <br />
+        <button class="btn-large" type="submit">{% trans "Sign Up" %} &raquo;</button>
+        <br>
+    </form>
+      <br>
     </div>
+    <br>
   </div>
 </section>
 {% endblock content %}
